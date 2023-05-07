@@ -1,0 +1,201 @@
+@import '../utils';
+
+.container {
+  width: 250px;
+  border: 0.1rem solid $oc-gray-1;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  box-shadow: 0px 6px 14px 0px rgba($color: #000000, $alpha: 0.3);
+  transition: box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px 0px rgba($color: #000000, $alpha: 0.3);
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  background: $oc-gray-2;
+  padding: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  mix-blend-mode: darken
+}
+
+.discountBadge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: $primary-color;
+  color: $text-white;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  font-size: 14px;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  .discountSign {
+    font-size: 13px;
+  }
+}
+
+.rating {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .icon {
+    color: $secondary-color;
+    margin-top: 0.1rem;
+    margin-right: 0.2rem;
+  }
+  .rate {
+    color: $text-black;
+  }
+  .count {
+    color: $text-dark-gray;
+    margin-left: 0.2rem;
+  }
+}
+
+.category {
+  background: $oc-gray-2;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 14px;
+  color: $text-dark-gray;
+  a {
+    color: $primary-color;
+    padding-left: 0.2rem;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.content {
+  padding: 1rem;
+}
+
+.title {
+  display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  color: $text-black;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 150ms ease-in-out;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currentPrice, .oldPrice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1rem;
+  color: $text-black;
+}
+
+.currency {
+  font-size: 14px;
+}
+
+.oldPrice {
+  color: $oc-red-3;
+  font-size: 14px;
+}
+
+.buttonsContainer {
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    svg {
+      font-size: 16px;
+    }
+  }
+}
+
+.cartButtons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  button, .counter {
+    flex-grow: 1;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.addToCart, .increaseCart {
+  background: $primary-color;
+  color: white;
+  transition: color 150ms ease-in-out;
+  &:hover {
+    background: $primary-color-hover;
+  }
+  &:active {
+    background: $primary-color-click;
+  }
+}
+.removeFromCart, .decreaseCart {
+  background: $oc-gray-1;
+  color: $text-black;
+  transition: background 150ms ease-in-out;
+  &:hover {
+    background: $oc-gray-2;
+  }
+  &:active {
+    background: $oc-gray-3;
+  }
+}
+
+.favorite {
+  color: $oc-gray-5;
+  transition: color 150ms ease-in-out, background 150ms ease-in-out;
+  border-radius: 0.2rem;
+  background: transparent;
+  &:hover {
+    // color: $oc-red-3;
+    background: $oc-gray-1;
+  }
+  &.active {
+    color: $oc-red-5;
+  }
+}

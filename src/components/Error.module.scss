@@ -1,0 +1,17 @@
+@import '../utils';
+
+.container {
+  background: $oc-red-2;
+  border: 0.1rem solid $oc-red-3;
+  border-radius: 0.2rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  h4 {
+    font-size: 20px;
+    color: $oc-red-8;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    color: $oc-red-9;
+  }
+}
